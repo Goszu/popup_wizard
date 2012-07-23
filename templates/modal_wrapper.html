@@ -11,14 +11,14 @@
             <div style="background-image: url(img/site/bg-body.png); height: 310px; width:574px;" id="container" class="shoppingWindow-body-container">
                 <div class="shoppingWindow-body">
                     <!--content-->
-
+                    <%= contentTmpl(model) %>
                 </div>
             </div>
             <div style="background-image: url(img/site/bg-footer.gif) !important" class="shoppingWindow-footer shoppingWindow-fixclear">
                 <div style="background-image: url(img/site/shadows.png) !important" class="shoppingWindow-footer-shadow"></div>
-                <div class="modal-controls">
+                <div class="shoppingWindow-controls">
                     <!--controls-->
-
+                    <%= controlsTmpl(model) %>
                 </div>
             </div>
         </div>
