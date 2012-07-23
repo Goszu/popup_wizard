@@ -69,31 +69,5 @@ WIZARD.Modal1 = Backbone.View.extend({
         WIZARD.modalBox = new WIZARD.Modal2({ model: this.model });
         $('body').append(WIZARD.modalBox.render().el);
         WIZARD.popup('.modal', false);
-        $('.payment-select').selectBox();
-        $('.shipment-select').selectBox();
-    }
-});
-
-
-TasksList = Backbone.View.extend({
-    template: _.template([
-        "<ul class='task_list'>",
-        "<% items.each(function(item) { %>",
-        "<%= itemTemplate(item) %>",
-        "<% }); %>",
-        "</ul>"
-    ].join('')),
-
-    itemTemplate: _.template(
-        "<li><%= name %></li>"
-    ),
-
-    render: function() {
-        var html = this.template({
-            items: tasks /* a collection */,
-            itemTemplate: this.itemTemplate
-        });
-
-        $(this.el).append(html);
     }
 });

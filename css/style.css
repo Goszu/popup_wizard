@@ -21,8 +21,12 @@ ul {
     z-index: 1000;
 }
 
-.selectBox {
-    float: right;
+.selectListPopup-list-container {
+    display: none;
+}
+
+.expanded {
+    display: block;
 }
 
 /* site styles */
@@ -768,7 +772,7 @@ textarea.shoppingWindow-Caption {
     font-size: 18px;
     color: #818181;
     float: left;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 
 /*Drop down list */
@@ -820,17 +824,12 @@ textarea.shoppingWindow-Caption {
     box-shadow: 1px 1px 5px #CBCBCA;
 }
 
-.button  .button-content {
-    height: 20px;
-    width: 279px;
-    float: left;
-}
-
 .button .button-content {
     float: left;
     height: 20px;
-    width: 298px;
+    width: 293px;
     text-align: right;
+    padding-left: 5px;
 }
 
 /*
@@ -1024,7 +1023,7 @@ textarea.shoppingWindow-Caption {
     font-size: 18px;
     color: #818181;
     float: left;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 
 .shoppingWindow-body .shoppingWindow-div3-body {

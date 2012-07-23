@@ -2,52 +2,64 @@
     <div class="shoppingWindow-div2-for-body">
         <div class="shoppingWindow-Innerdiv1-body" style="display: block;">Payment:</div>
 
-        <select class="payment-select">
-            <% for (i in payment) { %>
-            <option value="<%= shipment[i] %>"><%= payment[i] %></option>
-            <% } %>
-        </select>
-
+        <div class="button payment-select">
+            <div class="button-content">
+                <div class="addThingToListButton">
+                    <div class="addThingToList">
+                        <input type="button" class="subButton" id="dlabel2" value="<%= payment[0] %>">
+                    </div>
+                </div>
+            </div>
+            <div class="drop-button-div"></div>
+        </div>
     </div>
-    <div class="popup-content">
+    <div class="popup-content payment">
         <div class="selectListPopup">
-            <div class="selectListPopup-list-container" style="display: none">
+            <div class="selectListPopup-list-container payment" style="display: none">
                 <ul class="selectListPopup-lists">
-                    <li id="facb71a2-0cc5-4d12-af18-9cf9a45edfbf" methodid="facb71a2-0cc5-4d12-af18-9cf9a45edfbf" methodname="Paypal"> <img src="Images/paypal.jpg">Paypal</li>
-                    <li id="ce100256-b722-4326-9c4c-030b832e5720" methodid="ce100256-b722-4326-9c4c-030b832e5720" methodname="Google Checkout"><img src="Images/google.jpg">Google Checkout</li>
+                    <% for (i in payment) { %>
+                    <li <% if (i > 1) { %> style="display: none;" class="additional" <% } %> data-value="<%= payment[i] %>"><%= payment[i] %></li>
+                    <% } %>
                 </ul>
-                <a class="selectListPopup-more" id="seeAllMethodsId" style="display: block">See All Methods</a>
-                <a class="selectListPopup-new" id="newlist2"></a>
+                <a class="selectListPopup-more" id="seeAllPayments" style="display: block">See All Methods</a>
             </div>
         </div>
     </div>
+
+
     <div class="shoppingWindow-div2-body" style="display: block">
         <div class="shoppingWindow-Innerdiv1-body">Shipping:</div>
 
-        <select class="shipment-select">
-            <% for (i in shipment) { %>
-            <option value="<%= shipment[i] %>"><%= shipment[i] %></option>
-            <% } %>
-        </select>
-
+        <div class="button shipment-select">
+            <div class="button-content">
+                <div class="shippingMethodListButton">
+                    <div class="shippingMethodList">
+                        <input type="button" class="subButton" id="dlabel" value="<%= shipment[0] %>">
+                        <!--<input type="text" class="subButton2" id="InputValue" style="display: none">-->
+                    </div>
+                </div>
+            </div>
+            <div class="drop-button-div"></div>
+        </div>
         <div class="shoppingWindow-Innerdiv2-body"></div>
     </div>
-    <div class="popup-content">
+    <div class="popup-content shipment">
         <div class="selectListPopup">
-            <div class="selectListPopup-list-container" style="display: none">
+            <div class="selectListPopup-list-container shipment" style="display: none">
                 <ul class="selectListPopup-lists">
-                    <li id="445967bd-6977-41fb-a355-8deaa22be5bd" shippingid="445967bd-6977-41fb-a355-8deaa22be5bd" shippingname="Same Day">Same Day</li>
-                    <li id="e75aa6ae-74ca-4243-be05-e875ec7f7908" shippingid="e75aa6ae-74ca-4243-be05-e875ec7f7908" shippingname="Next Day">Next Day</li>
-                    <li id="0b56a354-8327-4237-91fc-2a145e8a0b4f" shippingid="0b56a354-8327-4237-91fc-2a145e8a0b4f" shippingname="2 Working Days">2 Working Days</li>
-                    <li id="db733fc0-d33b-11e1-9b23-0800200c9a66" shippingid="db733fc0-d33b-11e1-9b23-0800200c9a66" shippingname="3 Working Days">3 Working Days</li>
-                    <li id="e9515be0-d33b-11e1-9b23-0800200c9a66" shippingid="e9515be0-d33b-11e1-9b23-0800200c9a66" shippingname="5 Working Days">5 Working Days</li>
-                    <li id="f277e360-d33b-11e1-9b23-0800200c9a66" shippingid="f277e360-d33b-11e1-9b23-0800200c9a66" shippingname="Free">Free</li>
+                    <% for (i in shipment) { %>
+                    <li <% if (i > 1) { %> style="display: none;" class="additional" <% } %> data-value="<%= shipment[i] %>"><%= shipment[i] %></li>
+                    <% } %>
                 </ul>
-                <a class="selectListPopup-more" style="display: block" id="SeeAllLists">See All Methods</a>
-                <a class="selectListPopup-new" id="newlist">set a new date</a>
+                <a class="selectListPopup-more" style="display: block" id="seeAllShipments">See All Methods</a>
+                <a style="display: none;" class="selectListPopup-new" id="newlist">set a new date</a>
+                <input id="date-input" type="text" style="width: 316px; display: none;" value="" class="selectListPopup-new" />
             </div>
         </div>
     </div>
+
+
+
     <div class="shoppingWindow-div3-body" style="display: block">
         <div class="shoppingWindow-ProPic-Div">
             <img width="58px" height="58px" src="img/site/picture.jpeg">
@@ -73,3 +85,7 @@
         </div>
     </div>
 </div>
+
+
+
+
