@@ -1,0 +1,42 @@
+<div style="background-image: url(img/site/bg-body.png); height: 310px; width:574px;" id="container" class="shoppingWindow-body-container">
+    <div style="height: 263px;" class="shoppingWindow-body">
+        <div style="display:block;padding:18px;" class="shoppingWindow-main">
+            <div class="shoppingWindow-div1-body">
+                <div class="shoppingWindow-div1-ProPic">
+                    <img src="img/site/<%= WIZARD.user.get('icon') %>" height="58px" width="58px">
+                </div>
+                <textarea id="write-something" class="shoppingWindow-Caption">write something...</textarea>
+            </div>
+            <div class="shoppingWindow-imageAreaSizes-Div">
+                <ul class="shoppingWindow-imageAreaSizes">
+                    <li style="background-image: url(img/site/sizes.png) !important" class="shoppingWindow-imageAreaSize-s <% if (variants[0].size == 1) { %> active <% } %>"></li>
+                    <li style="background-image: url(img/site/sizes.png) !important" class="shoppingWindow-imageAreaSize-m <% if (variants[0].size == 2) { %> active <% } %>"></li>
+                    <li style="background-image: url(img/site/sizes.png) !important" class="shoppingWindow-imageAreaSize-l <% if (variants[0].size == 3) { %> active <% } %>"></li>
+                </ul>
+            </div>
+            <div class="shoppingWindow-imageArea">
+                <div class="shoppingWindow-imgCarousel">
+                                        <span>
+                                            <img alt="Motorola Droid, ogTitle=Motorola Droid Razr Maxx"
+                                                 style="margin-top: 17px !important;" class="shoppingWindow-currentImage"
+                                                 src="img/products/<%= variants[0].filename %>">
+                                        </span>
+                </div>
+            </div>
+            <div class="shoppingWindow-actions">
+                <textarea style="font-weight:bold;" id="txtArea-name" name="limitedtextarea" size="20" cols="16" rows="2" class="shoppingWindow-name"><%= name %></textarea>
+                <textarea id="desc-textArea" cols="16" rows="5" class="shoppingWindow-description"><%= variants[0].description %></textarea>
+            </div>
+            <a class="shoppingWindow-notFindingIt">Not finding it?</a>
+            <div class="shoppingWindow-imageAreaHeader shoppingWindow-fixclear">
+                <img alt="Previous Image" src="img/site/carousel-prev.png" class="shoppingWindow-prev">
+                <img alt="Next Image" src="img/site/carousel-next.png" class="shoppingWindow-next">
+                <div class="shoppingWindow-imageNumbers">
+                    <span id="num1" class="shoppingWindow-imageIndex">1</span> of
+                    <span id="num2" class="shoppingWindow-imageCount"><%= variants.length %></span>
+                </div>
+            </div>
+            <div class="shoppingWindow-errorNoDescDiv">Please enter in a name of at least 2 characters.</div>
+        </div>
+    </div>
+</div>
