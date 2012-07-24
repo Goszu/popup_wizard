@@ -6,6 +6,7 @@ WIZARD.ModalExample = Backbone.View.extend({
         this.controlsTmpl =  _.template(WIZARD.tpl.get('modal_1_controls'));
 
         this.attr = this.model.toJSON();
+        this.attr.baseUrl = WIZARD.config.get('baseUrl');
     },
     className: 'modal',
     render: function () {
